@@ -1,0 +1,43 @@
+<resources>
+    <style name="botones" parent="AppTheme.Base">
+        <item name="android:background">#008087</item>
+        <item name="android:color">#EAF2D7</item>
+        <item name="android:textColor">#EAF2D7</item>
+    </style>
+<!--    <style name="editText_ab" parent="AppTheme.Base">
+        <item name="android:minWidth">160dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColorHint">@color/blanco</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style> -->
+    <style name="color1" parent="AppTheme.Base">
+        <item name="android:background">#000</item>
+    </style>
+    <style name="color2" parent="AppTheme.Base">
+        <item name="android:background">#ccc</item>
+    </style>
+    <style name="color3" parent="AppTheme.Base">
+        <item name="android:background">#fff</item>
+    </style>
+    <style name="color4" parent="AppTheme.Base">
+        <item name="android:background">#000</item>
+    </style>
+    <style name="color5" parent="AppTheme.Base">
+        <item name="android:background">#ccc</item>
+    </style>
+    <style name="color6" parent="AppTheme.Base">
+        <item name="android:background">#fff</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.Base" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryColorDark</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="android:fontFamily">Roboto</item>
+    </style>
+
+
+</resources>

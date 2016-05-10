@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Kerbrum.iml" filepath="$PROJECT_DIR$/Kerbrum.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/carouselview/carouselview.iml" filepath="$PROJECT_DIR$/libs/carouselview/carouselview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/libs.iml" filepath="$PROJECT_DIR$/libs/libs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/libs/materialsteppers/materialsteppers.iml" filepath="$PROJECT_DIR$/libs/materialsteppers/materialsteppers.iml" />
+    </modules>
+  </component>
+</project>

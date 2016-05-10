@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/blanco">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:src="@mipmap/marca_postaa"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="24dp"/>
+    <!--<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Paciente"/>-->
+
+    <EditText
+        android:id="@+id/et_nombrePaciente"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_gravity="center"
+        android:hint="Nombre del paciente"
+        android:layout_marginBottom="12dp"
+        android:inputType="textCapWords"/>
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Acompañante"/>-->
+
+    <EditText
+        android:id="@+id/et_nombreAyudante"
+        android:layout_width="match_parent"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="Nombre del Acompañante"
+        android:inputType="textCapWords"
+        android:layout_marginBottom="32dp"
+        android:imeOptions="actionDone"/>
+
+    <Button
+        style="@style/botones"
+        android:background="@drawable/shape_botones"
+        android:id="@+id/btn_empezar"
+
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:text="EMPEZAR"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

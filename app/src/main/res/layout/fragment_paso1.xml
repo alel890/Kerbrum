@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="ar.com.kerbrum.kerbrum.fragment_paso1"
+    android:focusableInTouchMode="true">
+    <!-- TODO: chequear linear de mas -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:background="@color/blanco"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+<!-- fijarse que hay un layout demas -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+                    <!-- TODO hacer que el teclado no suba por defecto cuando se inicia paso 1 -->
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        app:fillColor="#008087"
+                        app:autoPlay="false"
+                        app:pageColor="#00000000"
+                        app:radius="6dp"
+                        app:strokeColor="#008087"
+                        app:strokeWidth="1dp"
+                        app:animateOnBoundary="false"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Color y Forma de la pastilla"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="20dp"/>
+                        <RadioGroup
+                            android:id="@+id/botonesSRColores"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginLeft="12dp"
+                            android:orientation="horizontal"
+                            android:weightSum="12">
+
+                            <RadioButton
+                                android:id="@+id/btn_color1"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color1" />
+                            <RadioButton
+                                android:id="@+id/btn_color2"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color2"/>
+                            <RadioButton
+                                android:id="@+id/btn_color3"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color3"/>
+                            <RadioButton
+                                android:id="@+id/btn_color4"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color4"/>
+                            <RadioButton
+                                android:id="@+id/btn_color5"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color5"/>
+                            <RadioButton
+                                android:id="@+id/btn_color6"
+                                style="@style/radioButtonPastilla"
+                                android:background="@drawable/shape_botones_color6"/>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="20sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unidad"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="20dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/radiogrup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:checkedButton="@+id/rb_g">
+                        <RadioButton
+                            android:id="@+id/rb_g"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="g"
+                            />
+                        <RadioButton
+                            android:id="@+id/rb_mg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mg"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Kerbrum</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="abrirDrawer">Abrir</string>
+    <string name="cerrarDrawer">Cerrar</string>
+
+
+    <string name="inicio">Inicio</string>
+    <string name="estadoActual">Estado Actual</string>
+    <string name="valija">Valija</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="configuracion">Configuracion</string>
+
+<!--PASO 1 -->
+    <string name="nombreMed">"Nombre de la medicina"</string>
+<!---->
+
+    <string-array name="periodoingesta">
+        <item>Una dosis por día</item>
+        <item>Una dosis por comida</item>
+        <item>Cada 15 días</item>
+        <item>Cada 1 mes</item>
+    </string-array>
+    <string-array name="duracionIngesta">
+        <item>Indefinido</item>
+        <item>días</item>
+        <item>meses</item>
+        <item>años</item>
+    </string-array>
+
+    <string-array name="nav_drawer_items">
+        <item>Inicio</item>
+        <item>Estado Actual</item>
+        <item>Valija</item>
+        <item>Sincronizar</item>
+        <item>Configuración</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@mipmap/inicio</item>
+        <item>@mipmap/estado</item>
+        <item>@mipmap/valija</item>
+        <item>@mipmap/sync</item>
+        <item>@mipmap/config</item>
+    </array>
+
+
+    <string name="done_menu">"Done"</string>
+
+</resources>

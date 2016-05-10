@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- no
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="stepper">#C5CAE9</color>
+    <color name="fondoClaro">#EAF2D7</color>
+    <color name="fondoOscuro">#009688</color>-->
+
+    <!-- paleta original-->
+    <color name="primaryColor">#009688</color>
+    <color name="blancopleno">#ffffff</color>
+    <color name="primaryColorDark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accentColor">#009688</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="grisclaro">#B6B6B6</color>
+    <color name="btnInactivo">#DCDCDC</color>
+    <color name="btnActivo">#505050</color>
+
+
+</resources>
