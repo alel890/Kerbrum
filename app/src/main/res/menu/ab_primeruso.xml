@@ -8,4 +8,10 @@
         app:showAsAction="ifRoom"
         android:icon="@mipmap/ic_done_white_24dp"
         />
+    <item
+        android:title="@string/edit_nombre_med"
+        android:id="@+id/editNombreMed"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/ic_mode_edit_white_24dp"/>
 </menu>
