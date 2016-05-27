@@ -143,7 +143,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="6.66"
                             android:layout_height="wrap_content"
-                            android:text="Cant de comprimidos en la caja"
+                            android:text="ja"
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="5dp"
                             style="@style/textodetvalertdialog" />
@@ -151,7 +151,7 @@
                         <EditText
                             android:id="@+id/etRemaining"
                             android:layout_width="0dp"
-                            android:layout_weight="3.33"
+                            android:layout_weight="5"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="8dp"
                             android:inputType="number"
@@ -167,7 +167,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="6.66"
                             android:layout_height="wrap_content"
-                            android:text="Cant de pastillas ya consumidas"
+                            android:text="idas"
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="5dp"
                             style="@style/textodetvalertdialog" />
@@ -192,7 +192,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="6.66"
                             android:layout_height="wrap_content"
-                            android:text="Cant de cajas que tiene actualmente"
+                            android:text="Cant de caj actualmente"
                             android:layout_marginLeft="8dp"
                             android:layout_marginTop="5dp"
                             style="@style/textodetvalertdialog" />

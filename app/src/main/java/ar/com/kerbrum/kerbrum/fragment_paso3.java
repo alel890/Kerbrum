@@ -71,7 +71,6 @@ public class fragment_paso3 extends stepperFragment implements View.OnClickListe
 
 
 
-
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(getActivity(), R.array.periodoingesta, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_item);
 

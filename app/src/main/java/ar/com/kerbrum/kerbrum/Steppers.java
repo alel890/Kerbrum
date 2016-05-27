@@ -10,7 +10,7 @@ import java.util.List;
 import ivb.com.materialstepper.simpleMobileStepper;
 
 public class Steppers extends simpleMobileStepper {
-
+    Medicamento med;
     List<Class> stepperFragmentList = new ArrayList<>();
     @Override
     public void onStepperCompleted() {

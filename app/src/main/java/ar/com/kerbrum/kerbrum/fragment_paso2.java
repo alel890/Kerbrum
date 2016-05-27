@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -39,6 +40,7 @@ public class fragment_paso2 extends stepperFragment implements View.OnClickListe
     Button btn_fechainicio;
     Activity activity;
     Spinner spin_duracionIngesta;
+    Medicamento med;
     ToggleButton lunes, martes, miercoles, jueves, viernes, sabado, domingo;
     TextView hora, dosis;
     public fragment_paso2() {
@@ -62,6 +64,12 @@ public class fragment_paso2 extends stepperFragment implements View.OnClickListe
         actionBar.setCustomView(vi);
         actionBar.show();
         /* ===== action bar ======= */
+        med = new Medicamento(Parcel.obtain());
+        Bundle bundle = this.getArguments();
+        if (bundle != null) {
+            med = bundle.getParcelable("Medicamento");
+        }
+
         v = inflater.inflate(R.layout.fragment_paso2, container, false);
         //TODO poder seleccionar todos los días tipo con un checkbox
         lunes = (ToggleButton) v.findViewById(R.id.lunes);
@@ -83,9 +91,9 @@ public class fragment_paso2 extends stepperFragment implements View.OnClickListe
 
         spin_duracionIngesta.setAdapter(adapter2);
 
-        et_Remaining.setText("30");
+
         et_Cajas.setText("2");
-        et_PastillasConsumidas.setText("15");
+        et_PastillasConsumidas.setText(med.getNombre());
 
         CompoundButton.OnCheckedChangeListener touchListener = new CompoundButton.OnCheckedChangeListener() {
 
@@ -124,7 +132,7 @@ public class fragment_paso2 extends stepperFragment implements View.OnClickListe
         domingo.setOnCheckedChangeListener(touchListener);
 
 
-
+        et_Remaining.setText( med.getNombre());
         return v;
     }
     @Override

@@ -5,6 +5,8 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
 import android.view.LayoutInflater;
@@ -37,6 +39,7 @@ public class fragment_paso1 extends stepperFragment  {
     CarouselView carouselView;
     public String colorFiltroImagen;
     Context context;
+    Medicamento med;
 
     RadioButton color1,color2,color3,color4,color5,color6,rb_g,rb_mg;
     //EditText et_nombreMed,et_gramaje;
@@ -63,7 +66,7 @@ public class fragment_paso1 extends stepperFragment  {
         /* ===== action bar ======= */
         v = inflater.inflate(R.layout.fragment_paso1, container, false);
         /*botones-colores*/
-
+        med = new Medicamento();
         context = getActivity();
         images = new ArrayList<ImageView>();
         carouselView = (CarouselView) v.findViewById(R.id.carouselView);
@@ -96,6 +99,8 @@ public class fragment_paso1 extends stepperFragment  {
                     case R.id.btn_color2:
                         colorFiltroImagen= "#D85050"; //rojo
                         setColor(colorFiltroImagen);
+                        med.setColor(2);
+                        med.setNombre("lalalala");
                         break;
 
                     case R.id.btn_color3:
@@ -164,8 +169,16 @@ public class fragment_paso1 extends stepperFragment  {
                 return super.onOptionsItemSelected(item);
         }
     }
+    @Override
+    public void onPause(){
+        super.onPause();
+        Fragment fp1 = new fragment_paso1();
+        Bundle bundle = new Bundle();
+        bundle.putParcelable("Medicamento", med);
+        fp1.setArguments(bundle);
 
 
+    }
 
 
 
