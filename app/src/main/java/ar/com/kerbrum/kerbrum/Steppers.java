@@ -1,8 +1,21 @@
 package ar.com.kerbrum.kerbrum;
 
+import android.content.Context;
 import android.content.DialogInterface;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.text.InputType;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,8 +23,12 @@ import java.util.List;
 import ivb.com.materialstepper.simpleMobileStepper;
 
 public class Steppers extends simpleMobileStepper {
-
+    //private Menu menu;
+    //EditText et_nombreMed;
     List<Class> stepperFragmentList = new ArrayList<>();
+    View vi;
+
+
     @Override
     public void onStepperCompleted() {
         showCompletedDialog();
@@ -38,6 +55,7 @@ public class Steppers extends simpleMobileStepper {
         alertDialog.show();
 
     }
+
 
     @Override
     public List<Class> init() {

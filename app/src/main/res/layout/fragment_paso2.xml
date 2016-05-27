@@ -7,19 +7,17 @@
     <!--TODO: agregar el scroll view xq no pude :) -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:weightSum="10"
-        >
+        android:weightSum="10" >
         <!--TODO agregar titulo de la medicina-->
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
+            style="@style/textoindicadoraccion.titulo"
             android:text="Días de ingesta"
-            android:layout_marginBottom="10sp"
-            android:layout_marginTop="10sp"
             />
+        <TextView
+            style="@style/textoindicadoraccion.descripcion"
+            android:text="Selecciona los días" />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -92,39 +90,67 @@
                 android:textOn="Do"
                 android:textOff="Do"/>
         </LinearLayout>
+        <TextView
+            style="@style/textoindicadoraccion.titulo"
+            android:text="Duración"/>
+        <TextView
+            style="@style/textoindicadoraccion.descripcion"
+            android:text="Ingresa el periodo de ingesta"/>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"
+                >
                 <EditText
+                    android:id="@+id/et_valor_periodo"
+                    android:minWidth="40dp"
+                    android:maxWidth="50dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="1"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:imeOptions="actionDone"/>
+                <TextView
+                    android:id="@+id/tv_unidad_periodo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
                 <Spinner
                     android:id="@+id/spin_duracion"
-                    android:layout_width="match_parent"
+                    android:minWidth="160dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
 
             </LinearLayout>
+            <TextView
+                style="@style/textoindicadoraccion.titulo"
+                android:text="Inicio de ingesta"/>
+            <TextView
+                style="@style/textoindicadoraccion.descripcion"
+                android:text="Indica cuando empezas"/>
             <Button
+                style="@style/botones"
                 android:id="@+id/btn_setFechaInicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Inicio de ingesta"
-                android:layout_marginRight="12dp"
-                android:layout_marginLeft="12dp"
-                style="@style/botones"/>
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp"/>
             <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="12sp"
+                android:layout_marginRight="12sp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -137,74 +163,47 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:weightSum="10"
                         android:orientation="horizontal">
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="6.66"
-                            android:layout_height="wrap_content"
-                            android:text="Cant de comprimidos en la caja"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="5dp"
-                            style="@style/textodetvalertdialog" />
+                            style="@style/textViewStock"
+                            android:text="Comprimidos en la caja" />
 
                         <EditText
                             android:id="@+id/etRemaining"
-                            android:layout_width="0dp"
-                            android:layout_weight="3.33"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
+                            style="@style/editTextStock"
                             android:inputType="number"
                             android:maxLength="5" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="6.66"
-                            android:layout_height="wrap_content"
-                            android:text="Cant de pastillas ya consumidas"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="5dp"
-                            style="@style/textodetvalertdialog" />
+                            style="@style/textViewStock"
+                            android:text="Pastillas ya consumidas" />
 
                         <EditText
                             android:id="@+id/etPastillasConsumidas"
-                            android:layout_width="0dp"
-                            android:layout_weight="3.33"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
+                            style="@style/editTextStock"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="5" />
 
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="10">
+                        android:orientation="horizontal">
 
                         <TextView
-                            android:layout_width="0dp"
-                            android:layout_weight="6.66"
-                            android:layout_height="wrap_content"
-                            android:text="Cant de cajas que tiene actualmente"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="5dp"
-                            style="@style/textodetvalertdialog" />
+                            style="@style/textViewStock"
+                            android:text="Cajas que tiene actualmente" />
 
                         <EditText
                             android:id="@+id/etCajas"
-                            android:layout_width="0dp"
-                            android:layout_weight="3.33"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="8dp"
+                            style="@style/editTextStock"
                             android:inputType="number"
-                            android:maxLength="2" />
+                            android:maxLength="5" />
 
                     </LinearLayout>
                 </LinearLayout>

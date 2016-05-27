@@ -47,5 +47,6 @@
 
 
     <string name="done_menu">"Done"</string>
+    <string name="edit_nombre_med">"EditNamemed"</string>
 
 </resources>

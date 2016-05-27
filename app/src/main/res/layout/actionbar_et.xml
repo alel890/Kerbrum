@@ -8,9 +8,14 @@
     <EditText
         style="@style/editText_ab"
         android:id="@+id/et_actionbar"
-        android:layout_gravity="start|center"
-        android:layout_marginRight="10dp"
-        android:hint="Nombre de la medicina" />
+        android:minWidth="160dp"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="10dp"
+        android:inputType="text"
+        android:hint="Nombre de la medicina"
+        android:imeOptions="actionDone"/>
+
+    <!-- android:hint="Nombre de la medicina"-->
 
     <!--<ImageButton
         android:id="@+id/check_actionbar"
