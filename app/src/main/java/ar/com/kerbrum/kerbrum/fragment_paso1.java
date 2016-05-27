@@ -9,12 +9,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -39,12 +41,17 @@ public class fragment_paso1 extends stepperFragment  {
     CarouselView carouselView;
     public String colorFiltroImagen;
     Context context;
+<<<<<<< HEAD
     Medicamento med;
 
+=======
+    private Menu menu;
+    EditText et_nombreMed;
+>>>>>>> origin/master
     RadioButton color1,color2,color3,color4,color5,color6,rb_g,rb_mg;
-    //EditText et_nombreMed,et_gramaje;
     RadioGroup radiog, botonesColores;
     private View v;
+
     public fragment_paso1() {
         // Required empty public constructor
     }
@@ -63,6 +70,7 @@ public class fragment_paso1 extends stepperFragment  {
         View vi = inflator.inflate(R.layout.actionbar_et, null);
         actionBar.setCustomView(vi);
         actionBar.show();
+        et_nombreMed = (EditText)vi.findViewById(R.id.et_actionbar);
         /* ===== action bar ======= */
         v = inflater.inflate(R.layout.fragment_paso1, container, false);
         /*botones-colores*/
@@ -153,15 +161,45 @@ public class fragment_paso1 extends stepperFragment  {
     }
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        this.menu = menu;
         getActivity().getMenuInflater().inflate(R.menu.ab_primeruso, menu);
         super.getActivity().onCreateOptionsMenu(menu);
+        MenuItem itemEditNombreMed = menu.findItem(R.id.editNombreMed);
+        itemEditNombreMed.setVisible(false);
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
+        MenuItem itemcheck = menu.findItem(R.id.check);
+        MenuItem itemEditNombreMed = menu.findItem(R.id.editNombreMed);
+        View view = getActivity().getCurrentFocus();
+        InputMethodManager imm = (InputMethodManager)getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+
         switch (item.getItemId()){
-            case R.menu.ab_primeruso:
-                Toast t = Toast.makeText(getActivity(),"Hola",Toast.LENGTH_SHORT);
-                t.show();
+            case R.id.check:
+                et_nombreMed.setImeOptions(EditorInfo.IME_ACTION_DONE);
+
+
+                if (view != null) {
+                    imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+                }
+
+                itemcheck.setVisible(false);
+                itemEditNombreMed.setVisible(true);
+                et_nombreMed.setEnabled(false);
+                et_nombreMed.setFocusable(false);
+                //et_nombreMed.getText();    get nombre medicina
+
+                return true;
+            case R.id.editNombreMed:
+                et_nombreMed.setEnabled(true);
+                et_nombreMed.setFocusable(true);
+                et_nombreMed.setFocusableInTouchMode(true);
+                et_nombreMed.requestFocus();
+
+                imm.showSoftInput(et_nombreMed, InputMethodManager.SHOW_FORCED);
+                itemcheck.setVisible(true);
+                itemEditNombreMed.setVisible(false);
+                //et_nombreMed.getText();    get nombre medicina
                 return true;
             default:
                 // If we got here, the user's action was not recognized.

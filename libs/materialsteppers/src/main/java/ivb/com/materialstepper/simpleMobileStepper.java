@@ -1,5 +1,6 @@
 package ivb.com.materialstepper;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -22,12 +24,11 @@ public abstract class simpleMobileStepper extends AppCompatActivity implements V
     private baseStepper mBaseStepper;
     private int RECOVERCURRENTSTATE = 0;
     private ScrollView mScroll;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_mobile_stepper);
-        if(getSupportActionBar()!=null){getSupportActionBar().hide();}
+        //if(getSupportActionBar()!=null){getSupportActionBar().hide();}
         mNext = (Button) findViewById(R.id.continuar);
         mPrevious = (Button)findViewById(R.id.atras);
         mStepText = (TextView)findViewById(R.id.steps1);
@@ -116,7 +117,6 @@ public abstract class simpleMobileStepper extends AppCompatActivity implements V
     public void updateUI(){
 //        mStepText.setText("Paso " + (mBaseStepper.CURRENT_PAGE + 1) + " de " + mBaseStepper.TOTAL_PAGE);
 
-
         switch(mBaseStepper.CURRENT_PAGE){
           case 0:
               mStepText.setTextColor(Color.parseColor("#212121"));
@@ -125,6 +125,8 @@ public abstract class simpleMobileStepper extends AppCompatActivity implements V
               mStepText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.active1,0,0,0);
               mStepText2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.inactive2,0,0,0);
               mStepText3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.inactive3,0,0,0);
+              mNext.setText("CONTINUAR");
+
               break;
           case 1:
               mStepText.setTextColor(Color.parseColor("#B6B6B6"));
@@ -133,6 +135,8 @@ public abstract class simpleMobileStepper extends AppCompatActivity implements V
               mStepText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.success,0,0,0);
               mStepText2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.active2,0,0,0);
               mStepText3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.inactive3,0,0,0);
+              mNext.setText("CONTINUAR");
+
               break;
           case 2:
               mStepText.setTextColor(Color.parseColor("#B6B6B6"));
@@ -141,6 +145,7 @@ public abstract class simpleMobileStepper extends AppCompatActivity implements V
               mStepText.setCompoundDrawablesWithIntrinsicBounds(R.drawable.success,0,0,0);
               mStepText2.setCompoundDrawablesWithIntrinsicBounds(R.drawable.success,0,0,0);
               mStepText3.setCompoundDrawablesWithIntrinsicBounds(R.drawable.active3,0,0,0);
+              mNext.setText("FINALIZAR");
               break;
 
       }
